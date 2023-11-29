@@ -1,0 +1,84 @@
+﻿@page
+@model SITE.Pages.Transports.IndexModel
+
+@{
+    ViewData["Title"] = "Транспорт";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Транспорт</h1>
+
+
+<style>
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .table th,
+        .table td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .table th {
+            background-color: #f2f2f2;
+        }
+
+        .table tbody tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .table a {
+            margin-right: 5px;
+        }
+</style>
+
+
+
+<p>
+    <a asp-page="Create">Создать транспорт</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Transport[0].Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Transport[0].Brand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Transport[0].PlaceCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Transport[0].RouteNum)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Transport) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlaceCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RouteNum)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

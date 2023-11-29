@@ -1,0 +1,125 @@
+﻿@page
+@model SITE.Pages.DetailsRoutes.IndexModel
+
+@{
+    ViewData["Title"] = "Расписание";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+
+
+<h1>Расписание</h1>
+
+@if (User.IsInRole("Admin") || User.IsInRole("Dispet"))
+{
+    
+    <p>
+        <a asp-page="Create">Создать маршрут</a>
+    </p>
+}
+
+<style>
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .table th,
+        .table td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .table th {
+            background-color: #f2f2f2;
+        }
+
+        .table tbody tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .table a {
+            margin-right: 5px;
+        }
+</style>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            @*<th>
+                @Html.DisplayNameFor(model => model.DetailsRoute[0].NumberR)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.DetailsRoute[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DetailsRoute[0].Day)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DetailsRoute[0].DepartureTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DetailsRoute[0].RouteNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DetailsRoute[0].Transport)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DetailsRoute[0].TravelTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DetailsRoute[0].Distance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DetailsRoute[0].Prise)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.DetailsRoute) {
+        <tr>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.NumberR)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Day)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartureTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RouteNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Transport)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TravelTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Distance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prise)
+            </td>
+
+            @if (User.IsInRole("Admin") || User.IsInRole("Dispet"))
+            {
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            }
+
+        </tr>
+}
+    </tbody>
+</table>

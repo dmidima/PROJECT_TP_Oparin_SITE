@@ -1,0 +1,294 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - АвтоВокзал</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SITE.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">АвтоВокзал</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Главная</a>
+                        </li>
+                        @*<li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>*@
+                        
+                       @* <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Cars/Index">Подробности маршрута</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Avtos/Index">AvtosAAAAAAA</a>*@
+                        @*</li>*@
+                        
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/DetailsRoutes/Index">Расписание</a>
+                        </li>
+
+                        @*<li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Students/Index">Таблица какая то</a>
+                        </li>*@
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/prob">Мои билеты</a>
+                        </li>
+
+                        @*<li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/DetaliRoute">Подробности маршрута(Скрытое)</a>
+                        </li>*@
+
+                        @if (User.IsInRole("Dispet"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/dispet">диспетчерская</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Transports/Index">Справочник транспорта</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Personals/Index">Справочник Персонала</a>
+                            </li>
+
+                        }
+
+
+                        
+
+                        
+
+                        @*<li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/prob">О нас</a>
+                        </li>*@
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    @*<style>
+        /* Стили для фиксированной шапки */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f2f2f2;
+            padding: 0px 0;
+            z-index: 1000; /* Для того, чтобы шапка была над другими элементами */
+        }
+        /* Дополнительные стили для основного контента */
+        body {
+            padding-top: 70px; /* Учитывая высоту шапки */
+        }
+    </style>*@
+
+
+    @*<style>
+        /* Стили для фиксированного футера */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .content {
+            padding-bottom: 80px; /* Учитывая высоту фиксированного футера */
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #f2f2f2;
+            padding: 10px 0;
+        }
+    </style>*@
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    @*<footer class="border-top footer text-muted">
+       <div class="container">
+            &copy; 2023 - SITE - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>*@
+
+    @*<footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <h3>О нас</h3>
+                    <p>Здесь вы можете добавить информацию о вашем сайте или компании.</p>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <h3>Связаться с нами</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-envelope"></i> example@example.com</li>
+                        <li><i class="fa fa-phone"></i> +1 123 456 7890</li>
+                        <li><i class="fa fa-map-marker"></i> Адрес вашей компании</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p class="text-center">Все права защищены &copy; 2023. Разработано командой SITE</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>*@
+
+    @*<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <h3>О нас</h3>
+                    <p>Здесь вы можете добавить информацию о вашем сайте или компании.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <h3>Связаться с нами</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-envelope"></i> example@example.com</li>
+                        <li><i class="fa fa-phone"></i> +1 123 456 7890</li>
+                        <li><i class="fa fa-map-marker"></i> Адрес вашей компании</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-xs-12">
+                    <p class="text-center">
+                        <a href="#">Помощь</a>
+                        <a href="#">Реквизиты</a>
+                        <a href="#">Контакты</a>
+                        <a href="#">Пользовательское соглашение</a>
+                        <a href="#">Политика конфиденциальности</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p class="text-center">Все права защищены &copy; 2023. Разработано командой SITE</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>*@
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <footer id="footer" class="footer-1">
+        @*<div class="main-footer widgets-dark typo-light">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="widget subscribe no-box">
+                            <h5 class="widget-title">АвтоВокзал<span></span></h5>
+                            <p> Пустота</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="widget no-box">
+                            <h5 class="widget-title">Быстрые ссылки<span></span></h5>
+                            <ul class="thumbnail-widget">
+                                <li>
+                                    <div class="thumb-content"><a href="#.">Бронь билета</a></div>
+                                </li>
+                                <li>
+                                    <div class="thumb-content"><a href="#.">Маршруты</a></div>
+                                </li>
+                                <li>
+                                    <div class="thumb-content"><a href="#.">1</a></div>
+                                </li>
+                                <li>
+                                    <div class="thumb-content"><a href="#.">2</a></div>
+                                </li>
+                                <li>
+                                    <div class="thumb-content"><a href="#.">News</a></div>
+                                </li>
+                                <li>
+                                    <div class="thumb-content"><a href="#.">3</a></div>
+                                </li>
+                                <li>
+                                    <div class="thumb-content"><a href="#.">4</a></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="widget no-box">
+                            <h5 class="widget-title">Поехали<span></span></h5>
+                            <p>Забронировать билет на комфортную поезду.</p>
+                            <a class="btn" href="#." target="_blank">Бронь билета</a>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+
+                        <div class="widget no-box">
+                            <h5 class="widget-title">Связаться с нами<span></span></h5>
+
+                            <p><a href="dmitry40646@gmail.com" title="glorythemes">НаВокзал@gmail.com</a></p>
+                            <ul class="social-footer2">
+                                <li class=""><a title="youtube" target="_blank" href="/"><img alt="youtube" width="30" height="30" src="C:\Users\Dmitriy\Desktop\567.png"></a></li>
+                                <li class=""><a href="/" target="_blank" title="Facebook"><img alt="Facebook" width="30" height="30" src=""></a></li>
+                                <li class=""><a href="/" target="_blank" title="Twitter"><img alt="Twitter" width="30" height="30" src=""></a></li>
+                                <li class=""><a title="instagram" target="_blank" href="/"><img alt="instagram" width="30" height="30" src=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>*@
+
+        <div class="footer-copyright">
+            @*<div class="container">*@
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>© 2023. Все права защищены. «АвтоВокзал.RU» — Онлайн сервис брони билетов на автобусы.</p>
+                    </div>
+                </div>
+@*            </div>*@
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,188 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SITE
+build_property.RootNamespace = SITE
+build_property.ProjectDir = C:\Users\Dmitriy\source\repos\SITE\SITE\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Dmitriy\source\repos\SITE\SITE
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/changeState.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcY2hhbmdlU3RhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/DetailsRoutes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGV0YWlsc1JvdXRlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/DetailsRoutes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGV0YWlsc1JvdXRlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/DetailsRoutes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGV0YWlsc1JvdXRlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/DetailsRoutes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGV0YWlsc1JvdXRlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/DetailsRoutes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGV0YWlsc1JvdXRlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/DetaliRoute.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGV0YWxpUm91dGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/dispet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcZGlzcGV0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/Personals/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyc29uYWxzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/Personals/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyc29uYWxzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/Personals/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyc29uYWxzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/Personals/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyc29uYWxzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/Personals/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVyc29uYWxzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/prob.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNccHJvYi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/ReservedSeats/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZXJ2ZWRTZWF0c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/ReservedSeats/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZXJ2ZWRTZWF0c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/ReservedSeats/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZXJ2ZWRTZWF0c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/ReservedSeats/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZXJ2ZWRTZWF0c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/ReservedSeats/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZXJ2ZWRTZWF0c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/Transports/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhbnNwb3J0c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/Transports/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhbnNwb3J0c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/Transports/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhbnNwb3J0c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/Transports/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhbnNwb3J0c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/Transports/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhbnNwb3J0c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/Tr/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/Tr/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/Tr/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/Tr/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/Tr/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Dmitriy/source/repos/SITE/SITE/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-s4hlkmbqu0

@@ -1,0 +1,358 @@
+﻿@page
+@using Microsoft.AspNetCore.Identity
+@using SITE.Data.Identity
+@inject SignInManager<ApplicationIdentityUser> SignInManager
+@model IndexModel
+@{
+    ViewData["Title"] = "АвтоВокзал";
+}
+
+
+<style>
+
+.booking-form {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+    /*body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }*/
+
+    .booking-form {
+        width: 300px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    label {
+        margin-top: 10px;
+        display: block;
+    }
+    .razd{
+        width:100%;
+        display:flex;
+        flex-direction:row;
+    }
+
+    .barr{
+        display: flex;
+        justify-content:space-between;
+
+
+    }
+</style>
+
+@*
+<form class="booking-form" method="post">
+    <h2>Бронирование билета</h2>
+    <label for="date">Дата поездки:</label>
+    <input type="date" id="date" name="Booking.DateBook" required min="2023-01-01">
+    <label for="time">Время поездки:</label>
+    <select id="time" name="Booking.TimeBook" required>
+
+        <option value="09:00">09:00</option>
+        <option value="14:00">14:00</option>
+        <option value="19:00">19:00</option>
+    </select>
+    <label for="seat">Номер места:</label>
+    <select id="seat" name="Booking.Seat" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+    </select>
+
+    <label for="email">Email пользователя:</label>
+    <input type="email" id="email" name="Booking.Email" required>
+    <button type="submit">Забронировать</button>
+    <script>
+        document.getElementById('date').setAttribute('min', new Date().toISOString().split('T')[0]);
+    </script>
+</form>*@
+
+
+<style>
+
+.image-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 90px;
+}
+
+.image-container figure {
+            position: relative;
+            width: 300px;
+            height: 250px;
+            margin: 0;
+            margin-bottom: -180px;
+}
+
+figcaption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 5px;
+        background-color: rgba(255, 255, 255, 0.8);
+        font-weight: bold;
+        font-size: 14px;
+        text-align: center;
+        z-index: 0.3;
+}
+
+.image-container img {
+        display: block;
+        width: 100%;
+        height: auto;
+}
+
+</style>
+
+<div class="text-center">
+    <h3 class="display-8">Популярные направления</h3>
+</div>
+
+<br />
+<div class="image-container">
+
+    <figure>
+        <img src="https://travelask.ru/system/commercial/excursions/images/images/001/606/029/original/49f76b36-4392-11eb-b927-ca121c776fc8.800x600.jpg?1671321699" alt="Image 2">
+        <figcaption><a href="/DetaliRoute?from=Владимир&to=Москва">Владимир-Москва</a></figcaption>
+    </figure>
+    <figure>
+        <img src="https://cdn.tripster.ru/thumbs2/91791048-c386-11e9-9dcc-02b782d69cda.800x600.jpg" alt="Image 2">
+        <figcaption><a href="/DetaliRoute?from=Владимир&to=Казань">Владимир-Казань</a></figcaption>
+    </figure>
+    <figure>
+        <img src="https://cdn.tripster.ru/thumbs2/2dedd8fa-e01a-11ec-b847-ea5a1c122c26.800x600.jpeg" alt="Image 1">
+        <figcaption><a href="/DetaliRoute?from=Владимир&to=Иваново">Владимир-Иваново</a></figcaption>
+    </figure>
+
+</div>
+
+
+
+
+
+
+<style>
+    .link {
+        text-decoration: none;
+        color: rgb(1,87,155);
+    }
+
+        .link:hover {
+            color: rgb(255,160,0);
+        }
+
+        .link:link {
+            color: rgb(1,87,155);
+        }
+</style>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h3>Билеты на автобус: онлайн расписание и стоимость билетов</h3>
+
+
+<br />
+
+<h3>Расписание Автобусов</h3>
+
+<br />
+
+<div class="razd">
+    <div class="barr" style="width:50%">
+        <div style="display: flex; flex-direction: column;">
+            <ul style="list-style-type: none; padding-left: 0;">
+
+
+                <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <h5 style="margin-right: 10px;">
+                        <a href="/DetaliRoute?from=Владимир&to=Иваново" class="link">Владимир-Иваново</a>
+                    </h5>
+                    @*<a class="btn btn-primary" asp-area="" asp-page="/DetaliRoute?from=Владимир&to=Иваново">Подробнее о маршруте</a>*@
+                </li>
+
+
+                <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <h5 style="margin-right: 10px;">
+                        <a href="/DetaliRoute?from=Владимир&to=Москва" class="link">Владимир-Москва</a>
+                    </h5>
+                    @*<a class="btn btn-primary" asp-area="" asp-page="/DetaliRoute?from=Владимир&to=Москва">Подробнее о маршруте</a>*@
+                </li>
+
+
+                <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <h5 style="margin-right: 10px;">
+                        <a href="/DetaliRoute?from=Владимир&to=Саратов" class="link">Владимир-Саратов</a>
+                    </h5>
+                    @*<a class="btn btn-primary" asp-area="" asp-page="/Students/Index">Подробнее о маршруте</a>*@
+                </li>
+                <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <h5 style="margin-right: 10px;">
+                        <a href="/DetaliRoute?from=Владимир&to=Уфа" class="link">Владимир-Уфа</a>
+                    </h5>
+                    @*<a class="btn btn-primary" asp-area="" asp-page="/Students/Index">Подробнее о маршруте</a>*@
+                </li>
+                <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <h5 style="margin-right: 10px;">
+                        <a href="/DetaliRoute?from=Владимир&to=Казань" class="link">Владимир-Казань</a>
+                    </h5>
+                    @*<a class="btn btn-primary" asp-area="" asp-page="/Students/Index">Подробнее о маршруте</a>*@
+                </li>
+                <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <h5 style="margin-right: 10px;">
+                        <a href="/DetaliRoute?from=Владимир&to=Воронеж" class="link">Владимир-Воронеж</a>
+                    </h5>
+                    @*<a class="btn btn-primary" asp-area="" asp-page="/Students/Index">Подробнее о маршруте</a>*@
+                </li>
+                <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <h5 style="margin-right: 10px;">
+                        <a href="/DetaliRoute?from=Владимир&to=Челябинск" class="link">Владимир-Челябинск</a>
+                    </h5>
+                    @*<a class="btn btn-primary" asp-area="" asp-page="/Students/Index">Подробнее о маршруте</a>*@
+                </li>
+                <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <h5 style="margin-right: 10px;">
+                        <a href="/DetaliRoute?from=Владимир&to=Самара" class="link">Владимир-Самара</a>
+                    </h5>
+                    @*<a class="btn btn-primary" asp-area="" asp-page="/Students/Index">Подробнее о маршруте</a>*@
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div style="width:50%">
+
+        @*<form class="booking-form" method="post">
+            <h2>Бронирование билета</h2>
+            <label for="date">Дата поездки:</label>
+            <input type="date" id="date" name="Booking.DateBook" required min="2023-01-01">
+            <label for="time">Время поездки:</label>
+            <select id="time" name="Booking.TimeBook" required>
+
+                <option value="09:00">09:00</option>
+                <option value="14:00">14:00</option>
+                <option value="19:00">19:00</option>
+            </select>
+            <label for="seat">Номер места:</label>
+            <select id="seat" name="Booking.Seat" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+
+            <label for="email">Email пользователя:</label>
+            <input type="email" id="email" name="Booking.Email" required>
+            <button type="submit">Забронировать</button>
+            <script>
+                document.getElementById('date').setAttribute('min', new Date().toISOString().split('T')[0]);
+            </script>
+
+
+            <script>
+                document.getElementById('date').addEventListener('change', function () {
+                    var selectedDate = this.value;
+
+                    
+
+                    // Получите список доступных мест, исключив забронированные места
+                    var seatSelect = document.getElementById('seat');
+                    Array.from(seatSelect.options).forEach(function (option) {
+                        if (reservedSeatsForDate.includes(parseInt(option.value))) {
+                            option.disabled = true;
+                        } else {
+                            option.disabled = false;
+                        }
+                    });
+                });
+            </script>
+
+        </form>*@
+    </div>
+
+</div>
+
+@*
+@if (SignInManager.IsSignedIn(User)) 
+{
+    <span>Logget In</span>
+    <br />
+    <br />
+
+    <form method="post" action="">
+        <b>Role:</b>
+        <input type="text" name="RoleName" />
+        <button type = "submit" class="btn btn-lg btn-primary" asp-page-handler = "NewRole">Create new role</button>
+        <button type = "submit" class="btn btn-lg btn-primary" asp-page-handler = "AddRole">Assign Role</button>
+        <button type="submit" class="btn btn-lg btn-primary" asp-page-handler="RemoveRole">DEL Role</button>
+
+    </form>
+}
+else
+{
+    <span>NOT Logget In</span>
+}
+
+@if (User.IsInRole("Admin"))
+{
+
+    <p>
+        <a asp-page="Create">Создать маршрут</a>
+    </p>
+}*@

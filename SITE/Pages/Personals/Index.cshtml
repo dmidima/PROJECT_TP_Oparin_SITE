@@ -1,0 +1,84 @@
+﻿@page
+@model SITE.Pages.Personals.IndexModel
+
+@{
+    ViewData["Title"] = "Персонал";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Персонал</h1>
+
+
+<style>
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .table th,
+        .table td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .table th {
+            background-color: #f2f2f2;
+        }
+
+        .table tbody tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .table a {
+            margin-right: 5px;
+        }
+</style>
+
+
+
+<p>
+    <a asp-page="Create">Добавить персонал</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Personal[0].Surname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Personal[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Personal[0].Job)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Personal[0].WorkTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Personal) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Surname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Job)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkTime)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

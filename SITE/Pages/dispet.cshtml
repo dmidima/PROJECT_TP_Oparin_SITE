@@ -1,0 +1,33 @@
+﻿@page
+@model dispet
+
+@{
+    ViewData["Title"] = "диспетчер";
+}
+<style>
+    td, tr{
+            padding:50px;
+            margin:25px;
+        border-collapse:inherit;
+        border: 1px solid black;
+        text-align:center;
+    }
+</style>
+<table>
+@foreach (var booking in Model.Infa)
+{
+    <tr>
+        <td>@booking.Id</td>
+        <td>@booking.DateBook</td>
+        <td>@booking.TimeBook</td>
+        <td>@booking.Seat</td>
+        <td>@booking.Email</td>
+        <td>@booking.otkyda</td>
+        <td>@booking.kyda</td>
+        <td>@booking.sostoania</td>
+        <td> <a href="/changeState?id=@booking.Id&newState=подтвержден"> подтвердить</a></td>
+        <td> <a href="/changeState?id=@booking.Id&newState=отменен"> отменить</a></td>
+    </tr>
+    }
+
+</table>

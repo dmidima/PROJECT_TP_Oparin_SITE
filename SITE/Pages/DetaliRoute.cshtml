@@ -1,0 +1,185 @@
+﻿@page
+@model DetaliRoute
+
+@{
+    ViewData["Title"] = "Подробности";
+}
+<h1>Подробности маршрута @Model.from-@Model.to</h1>
+
+<br />
+<br />
+
+@*<p>@Model.from-@Model.to</p>*@
+
+
+
+
+<style>
+
+    .booking-form {
+        width: 300px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+    /*body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }*/
+
+    .booking-form {
+        width: 300px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    label {
+        margin-top: 10px;
+        display: block;
+    }
+
+    .razd {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .barr {
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+
+
+
+
+
+<div class="razd">
+    <div class="barr" style="width:50%">
+        <div style="display: flex; flex-direction: column;">
+            <h4>Рабочие дни маршрута: @Model.Infa.Day</h4>
+
+            <h4>Время отправления в: @Model.Infa.DepartureTime</h4>
+
+            <h4>Номер маршрута: @Model.Infa.RouteNumber</h4>
+
+            <h4>Дистанция по маршруту: @Model.Infa.Distance</h4>
+
+            <h4>Время в пути: @Model.Infa.TravelTime</h4>
+
+            <h4>Стоимость билета: @Model.Infa.Prise</h4>
+        </div>
+
+    </div>
+
+    @using Microsoft.AspNetCore.Identity
+    @using SITE.Data.Identity
+    @using SITE.Areas.Identity.Pages.Account
+    @inject SignInManager<ApplicationIdentityUser> SignInManager
+    @if (@SignInManager.IsSignedIn(User))
+    {
+        <div style="width:50%">
+
+        <form class="booking-form" method="post">
+            <h2>Бронирование билета</h2>
+            <label for="date">Дата поездки:</label>
+            <input type="date" id="date" name="Booking.DateBook" required min="2023-01-01">
+            <label for="time">Время поездки:</label>
+
+            <select id="time" name="Booking.TimeBook" required>
+            @foreach (var time in Model.times){
+                <option value="@time">@time</option>
+            }
+            </select>
+
+            <label for="seat">Номер места:</label>
+            <select id="seat" name="Booking.Seat" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+            </select>
+
+
+            <label for="email">Email пользователя:</label>
+            <input type="email" id="email" name="Booking.Email" value="@User.Identity?.Name" required>
+
+            <button type="submit">Забронировать</button>
+
+            <input type="hidden" id="otkyda" name="Booking.otkyda" value="@Model.from" required>
+            <input type="hidden" id="kyda" name="Booking.kyda" value="@Model.to" required>
+
+            <input type="hidden" id="sostoania" name="Booking.sostoania" value="в обработке" required>
+
+            <script>
+                document.getElementById('date').setAttribute('min', new Date().toISOString().split('T')[0]);
+            </script>
+
+
+
+
+        </form>
+    </div>
+    }
+
+</div>
+
+@if (@Model.taken==1){
+<script>
+    
+    function ready() {
+        alert('Место занято!');
+    }
+
+    document.addEventListener("DOMContentLoaded", ready);
+    
+</script>
+}

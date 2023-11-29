@@ -1,0 +1,75 @@
+﻿@page
+@model SITE.Pages.DetailsRoutes.CreateModel
+
+@{
+    ViewData["Title"] = "Создать";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Создать</h1>
+
+@*<h4>Детали</h4>*@
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*<div class="form-group">
+                <label asp-for="DetailsRoute.NumberR" class="control-label"></label>
+                <input asp-for="DetailsRoute.NumberR" class="form-control" />
+                <span asp-validation-for="DetailsRoute.NumberR" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="DetailsRoute.Name" class="control-label"></label>
+                <input asp-for="DetailsRoute.Name" class="form-control" />
+                <span asp-validation-for="DetailsRoute.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DetailsRoute.Day" class="control-label"></label>
+                <input asp-for="DetailsRoute.Day" class="form-control" />
+                <span asp-validation-for="DetailsRoute.Day" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DetailsRoute.DepartureTime" class="control-label"></label>
+                <input asp-for="DetailsRoute.DepartureTime" class="form-control" />
+                <span asp-validation-for="DetailsRoute.DepartureTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DetailsRoute.RouteNumber" class="control-label"></label>
+                <input asp-for="DetailsRoute.RouteNumber" class="form-control" />
+                <span asp-validation-for="DetailsRoute.RouteNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DetailsRoute.Transport" class="control-label"></label>
+                <input asp-for="DetailsRoute.Transport" class="form-control" />
+                <span asp-validation-for="DetailsRoute.Transport" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DetailsRoute.TravelTime" class="control-label"></label>
+                <input asp-for="DetailsRoute.TravelTime" class="form-control" />
+                <span asp-validation-for="DetailsRoute.TravelTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DetailsRoute.Distance" class="control-label"></label>
+                <input asp-for="DetailsRoute.Distance" class="form-control" />
+                <span asp-validation-for="DetailsRoute.Distance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DetailsRoute.Prise" class="control-label"></label>
+                <input asp-for="DetailsRoute.Prise" class="form-control" />
+                <span asp-validation-for="DetailsRoute.Prise" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
